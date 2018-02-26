@@ -3,8 +3,8 @@ Hadoop Single Node Cluster on Docker.
 
 Following this steps you can build and use the image to create Hadoop Single Node Cluster containers.
 
-Install hadoop container.
--------------------------
+Create Hadoop image.
+--------------------
 
      $ git clone https://gitlab.com/rancavil/hadoop.git
      $ cd hadoop
