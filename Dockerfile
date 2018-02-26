@@ -15,7 +15,7 @@ RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa && \
 
 RUN sed -i -e 's/${JAVA_HOME}/\/usr\/lib\/jvm\/java-8-openjdk-amd64/g' /home/hduser/hadoop-2.9.0/etc/hadoop/hadoop-env.sh
 
-RUN echo "ListenAddress 0.0.0.0" >> /etc/ssh/sshd_config
+RUN echo "ListenAddress 0.0.0.0" > /etc/ssh/sshd_config
 
 COPY ssh_config /etc/ssh/ssh_config
 
