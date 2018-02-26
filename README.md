@@ -19,16 +19,20 @@ To run and create a container execute the next command:
 
 Make sure change **container-name** by your favorite name and set **your-hostname** with by your ip or name machine.
 
-Inside container you can start with the configuration and services.
+When you run the container, at the entrypoint you use the docker-entrypoint.sh shell script that execute the following sequence of commands.
 
-Format the namenode:
+First, start ssh service:
 
-     $ bin/hdfs namenode -format
+     service ssh start
+     bin/hdfs namenode -format
 
-Now you can start the services:
+Second, start the services dfs and yarn:
 
-     $ sbin/start-dfs.sh
-     $ sbin/start-yarn.sh
+     sbin/start-dfs.sh
+     sbin/start-yarn.sh
+     bash
+
+Finally, you can use the container. 
 
 To check if hadoop container is working go to the url in your browser.
 
